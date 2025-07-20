@@ -1,0 +1,6 @@
+.custom-dashed-border {
+  border: 2px dashed #d8b4fe; /* tailwind color 'purple-200' */
+  border-radius: 1.5rem;
+  padding: 1rem;
+  border-image: repeating-linear-gradient(90deg, #d8b4fe 0 4px, transparent 4px 12px) 1;
+}
