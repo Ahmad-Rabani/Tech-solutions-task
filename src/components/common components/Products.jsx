@@ -8,7 +8,7 @@ const Products = ({ products }) => {
       {products.map((product, index) => (
         <div
           key={product.id}
-          className={`border-2 border-dashed border-purple-200 p-[18px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group`}
+          className={`border-4 border-dashed border-purple-200 p-[18px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 group`}
           style={{
             animationDelay: `${index * 0.2}s`,
           }}

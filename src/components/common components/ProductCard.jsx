@@ -1,13 +1,18 @@
 import React from "react";
 import Image from "next/image";
 
-const ProductCard = ({ post, isLarge = false, isMinimal = false }) => {
+const ProductCard = ({ post, isLarge = false, isMinimal = false, index = 0 }) => {
   return (
     <div className="group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
       <div
         className={`bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full relative ${
           isLarge ? "lg:flex lg:flex-row" : ""
+        } ${
+          (!isLarge && !isMinimal) || isLarge 
+            ? "border-4 border-dashed border-purple-200 p-[18px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-102 hover:-translate-y-1" 
+            : ""
         }`}
+        style={(!isLarge && !isMinimal) || isLarge ? { animationDelay: `${index * 0.2}s` } : {}}
       >
         {/* Image Container */}
         <div
