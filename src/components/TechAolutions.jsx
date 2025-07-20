@@ -9,7 +9,6 @@ import LatestBlogLayout from "./Latestproducts";
 import Footer from "./Footer";
 
 export default function BeautyLandingPage() {
-
   const products = [
     {
       id: 1,

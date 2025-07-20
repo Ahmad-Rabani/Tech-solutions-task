@@ -62,24 +62,19 @@ export default function LatestBlogLayout() {
 
         {/* Main Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Side - 2fr */}
           <div className="lg:col-span-2">
-            {/* Top Row - 2 products */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               {leftTopPosts.map((post) => (
                 <ProductCard key={post.id} post={post} />
               ))}
             </div>
 
-            {/* Bottom Row - 1 full-width product */}
             <div className="w-full">
               <ProductCard post={leftBottomPost} isLarge={true} />
             </div>
           </div>
 
-          {/* Right Side - 1fr */}
           <div className="lg:col-span-1">
-            {/* 3 products in column */}
             <div className="flex flex-col gap-6">
               {rightPosts.map((post) => (
                 <ProductCard key={post.id} post={post} isMinimal={true} />
