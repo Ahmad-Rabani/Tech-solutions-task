@@ -9,7 +9,7 @@ const ProductShow = () => {
           alt="products"
           width={427}
           height={392}
-          className="object-cover w-full h-auto"
+          className="object-cover w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[320px]"
         />
       </div>
 
@@ -19,7 +19,7 @@ const ProductShow = () => {
           alt="products"
           width={427}
           height={392}
-          className="object-cover w-full h-auto"
+          className="object-cover w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[320px]"
         />
       </div>
 
@@ -29,7 +29,7 @@ const ProductShow = () => {
           alt="products"
           width={427}
           height={392}
-          className="object-cover w-full h-auto"
+          className="object-cover w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[320px]"
         />
       </div>
     </div>

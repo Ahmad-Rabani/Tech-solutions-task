@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Sparkles } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,9 +9,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="text-2xl font-bold bg-gradient-to-r text-black bg-clip-text">
-              Logo
-            </div>
+            <a href="#" className="flex items-center gap-2 group cursor-pointer">
+              <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-400 text-white shadow-md group-hover:scale-105 transition-transform duration-200">
+                <Sparkles className="w-5 h-5" />
+              </span>
+            </a>
           </div>
 
           {/* Desktop Menu */}
@@ -23,10 +25,16 @@ const Navbar = () => {
               HOME
             </a>
             <a
-              href="#"
+              href="#products"
               className="text-gray-700 hover:text-pink-500 transition-colors duration-200 font-light"
             >
               PRODUCTS
+            </a>
+            <a
+              href="#latest"
+              className="text-gray-700 hover:text-pink-500 transition-colors duration-200 font-light"
+            >
+              LATEST
             </a>
             <div className="relative group">
               <button className="flex items-center text-gray-700 hover:text-pink-500 transition-colors duration-200 font-light">
@@ -35,19 +43,19 @@ const Navbar = () => {
               </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <a
-                  href="#"
+                  href="#beauty-tips"
                   className="block px-4 py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-500 transition-colors duration-200"
                 >
                   Beauty Tips
                 </a>
                 <a
-                  href="#"
+                  href="#skincare-guide"
                   className="block px-4 py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-500 transition-colors duration-200"
                 >
                   Skincare Guide
                 </a>
                 <a
-                  href="#"
+                  href="#makeup-trends"
                   className="block px-4 py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-500 transition-colors duration-200"
                 >
                   Makeup Trends
@@ -58,7 +66,7 @@ const Navbar = () => {
 
           {/* Desktop Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="bg-black text-white px-6 py-2 font-light hover:bg-gray-800 transition-colors duration-200 transform hover:scale-105">
+            <button className="bg-black text-white px-6 py-2 font-light hover:bg-gray-800 transition-colors duration-200 transform hover:scale-105 cursor-pointer">
               Button
             </button>
           </div>
@@ -67,7 +75,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-pink-500 transition-colors duration-200"
+              className="text-gray-700 hover:text-pink-500 transition-colors duration-200 cursor-pointer"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -90,10 +98,34 @@ const Navbar = () => {
               HOME
             </a>
             <a
-              href="#"
+              href="#products"
               className="block px-3 py-2 text-gray-700 hover:text-pink-500 transition-colors duration-200"
             >
               PRODUCTS
+            </a>
+            <a
+              href="#beauty-tips"
+              className="block px-3 py-2 text-gray-700 hover:text-pink-500 transition-colors duration-200"
+            >
+              Beauty Tips
+            </a>
+            <a
+              href="#skincare-guide"
+              className="block px-3 py-2 text-gray-700 hover:text-pink-500 transition-colors duration-200"
+            >
+              Skincare Guide
+            </a>
+            <a
+              href="#makeup-trends"
+              className="block px-3 py-2 text-gray-700 hover:text-pink-500 transition-colors duration-200"
+            >
+              Makeup Trends
+            </a>
+            <a
+              href="#latest"
+              className="block px-3 py-2 text-gray-700 hover:text-pink-500 transition-colors duration-200"
+            >
+              LATEST
             </a>
             <a
               href="#"
@@ -101,7 +133,7 @@ const Navbar = () => {
             >
               BLOGS
             </a>
-            <button className="w-full text-left bg-black text-white px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-200">
+            <button className="w-full text-left bg-black text-white px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-200 cursor-pointer">
               Shop
             </button>
           </div>

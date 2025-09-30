@@ -50,12 +50,7 @@ export default function LatestBlogLayout() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className=" text-3xl md:text-4xl font-bold text-center mb-12 text-black"
-            style={{
-              fontFamily: "Sansation",
-              fontSize: "32px",
-              fontWeight: 700,
-            }}>
+          <h1 className="section-heading text-3xl md:text-4xl text-center mb-12 text-black">
             LATEST
           </h1>
         </div>
@@ -87,11 +82,13 @@ export default function LatestBlogLayout() {
         {/* View All Button */}
         <div className="text-center mt-12">
           <button
-            className="border border-gray-900 text-gray-900 font-medium tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            className="border border-gray-900 text-gray-900 font-medium tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer"
             style={{
               width: "162px",
               height: "30px",
             }}
+            
+            
           >
             VIEW ALL
           </button>

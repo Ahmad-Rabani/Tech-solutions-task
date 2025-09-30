@@ -6,7 +6,6 @@ const Footer = () => {
 
   const handleSubscribe = () => {
     if (email.trim()) {
-      // Handle subscription logic here
       console.log('Subscribed with email:', email);
       setEmail('');
     }
@@ -20,7 +19,11 @@ const Footer = () => {
           
           {/* Left Side - Logo and Newsletter Section */}
           <div className="lg:flex-shrink-0">
-            <h2 className="text-2xl font-bold mb-4">Logo</h2>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-400 text-white shadow-md">
+                <span className="text-lg">✨</span>
+              </span>
+            </div>
             <p className="text-gray-300 mb-6">It's time to shine again!</p>
             
             {/* Newsletter Signup */}
@@ -35,7 +38,7 @@ const Footer = () => {
                 />
                 <button
                   onClick={handleSubscribe}
-                  className="px-4 sm:px-6 py-2 bg-white text-black font-medium hover:bg-gray-200 transition-colors text-sm whitespace-nowrap"
+                  className="px-4 sm:px-6 py-2 bg-white text-black font-medium hover:bg-gray-200 transition-colors text-sm whitespace-nowrap cursor-pointer"
                 >
                   SUBSCRIBE
                 </button>

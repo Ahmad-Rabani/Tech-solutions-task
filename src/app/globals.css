@@ -4,39 +4,34 @@
 @layer components {
   .custom-border {
     position: relative;
-    border-radius: 1rem;
+    border-radius: 0;
+    background-clip: padding-box;
+    overflow: hidden;
   }
 
-  .custom-border::before,
+  .section-heading{
+    font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
   .custom-border::after {
     content: "";
     position: absolute;
-    z-index: 1;
-    border: 2px dashed rgba(211, 160, 255, 0.6);
+    inset: 18px;
+    border-radius: 0;
     pointer-events: none;
-    border-radius: 1rem;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><rect x='1.5' y='1.5' width='97' height='97' rx='0' ry='0' fill='none' stroke='%23FFC0CB' stroke-width='3' stroke-dasharray='18 24' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>");
   }
 
-  .custom-border::before {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-left: none;
-    border-right: none;
-    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
-  }
-
-  .custom-border::after {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-top: none;
-    border-bottom: none;
-    mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  .custom-border > *{
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -62,4 +57,8 @@
 body{
   margin: 0;
   padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
 }

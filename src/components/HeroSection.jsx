@@ -32,7 +32,7 @@ const HeroSection = () => {
               </p>
               <button
                 style={{ fontFamily: "Sansation Light, sans-serif" }}
-                className="bg-black text-white px-4 sm:px-6 text-[10px] sm:text-[10px] hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg w-[100px] h-[25px] sm:w-auto"
+                className="bg-black text-white px-4 sm:px-6 text-[10px] sm:text-[10px] hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg w-[100px] h-[25px] sm:w-auto cursor-pointer"
               >
                 Read More
               </button>
